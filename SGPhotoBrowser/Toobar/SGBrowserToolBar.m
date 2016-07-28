@@ -31,7 +31,7 @@
     SGBrowserMainToolBar *mainToolBar = [[SGBrowserMainToolBar alloc] initWithFrame:self.frontFrame];
     self.mainToolBar = mainToolBar;
     [self addSubview:mainToolBar];
-    WS();
+    sg_ws();
     [mainToolBar setButtonActionHandlerBlock:^(UIBarButtonItem *item) {
         switch (item.tag) {
             case SGBrowserToolButtonEdit:

@@ -17,6 +17,7 @@
 #import "SGUIKit.h"
 #import "SDWebImagePrefetcher.h"
 #import "MBProgressHUD+SGExtension.h"
+#import "UIImageView+SGExtension.h"
 
 @interface SGPhotoBrowser () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     CGFloat _margin, _gutter;
@@ -67,7 +68,7 @@
                 break;
         }
     }];
-    WS();
+    sg_ws();
     [toolBar.secondToolBar setButtonActionHandlerBlock:^(UIBarButtonItem *item) {
         switch (item.tag) {
             case SGBrowserToolButtonBack: {
@@ -276,6 +277,7 @@
 #pragma mark -
 #pragma mark UICollectionView Delegate (FlowLayout)
 - (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    SGPhotoCell *cell = (SGPhotoCell *)[collectionView cellForItemAtIndexPath:indexPath];
     if (self.toolBar.isEditing) {
         SGPhotoModel *model = self.photoAtIndexHandler(indexPath.row);
         model.isSelected = !model.isSelected;
@@ -284,10 +286,11 @@
         } else {
             [self.selectModels removeObject:model];
         }
-        SGPhotoCell *cell = (SGPhotoCell *)[collectionView cellForItemAtIndexPath:indexPath];
         cell.model = model;
         return;
     }
+    // if the thumb image is downloading, pretend users from look at the origin image.
+    if (cell.imageView.hud) return;
     SGPhotoViewController *vc = [SGPhotoViewController new];
     vc.browser = self;
     vc.index = indexPath.row;

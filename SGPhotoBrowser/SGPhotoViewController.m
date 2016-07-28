@@ -7,12 +7,12 @@
 //
 
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "SGUIKit.h"
 #import "SGPhotoViewController.h"
 #import "SGPhotoBrowser.h"
 #import "SGPhotoView.h"
 #import "SGPhotoModel.h"
 #import "SGPhotoToolBar.h"
-#import "SGUIKit.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+SGExtension.h"
 
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     [self setupView];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    WS();
+    sg_ws();
     [self.photoView setSingleTapHandlerBlock:^{
         [weakSelf toggleBarState];
     }];
@@ -47,7 +47,7 @@
     SGPhotoToolBar *tooBar = [[SGPhotoToolBar alloc] initWithFrame:[self getBarFrame]];
     self.toolBar = tooBar;
     [self.view addSubview:tooBar];
-    WS();
+    sg_ws();
     [self.toolBar setButtonActionHandlerBlock:^(UIBarButtonItem *sender) {
         switch (sender.tag) {
             case SGPhotoToolBarTrashTag:

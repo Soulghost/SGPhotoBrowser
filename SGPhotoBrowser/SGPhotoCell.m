@@ -23,8 +23,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.6f];
         self.hidden = YES;
-        UIImage *selectImage = [UIImage imageNamed:@"SelectButton"];
-        UIImageView *selectImageView = [[UIImageView alloc] initWithImage:selectImage];
+        UIImageView *selectImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SGPhotoBrowser.bundle/SelectButton@2x.png" ofType:nil]]];
         self.selectImageView = selectImageView;
         [self addSubview:selectImageView];
     }
@@ -44,7 +43,6 @@
 
 @interface SGPhotoCell ()
 
-@property (nonatomic, weak) UIImageView *imageView;
 @property (nonatomic, weak) SGPhotoCellMaskView *selectMaskView;
 
 @end

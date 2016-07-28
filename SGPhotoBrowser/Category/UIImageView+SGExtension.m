@@ -38,7 +38,7 @@ static char modelKey;
         hud.mode = MBProgressHUDModeAnnularDeterminate;
         [self addSubview:hud];
         [hud showAnimated:YES];
-        UIImage *placeHolderImage = [UIImage imageNamed:@"imagePlaceholder"];
+        UIImage *placeHolderImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SGPhotoBrowser.bundle/ImagePlaceholder.png" ofType:nil]];
         if (self.model.thumbURL) {
             NSString *key = [mgr cacheKeyForURL:self.model.thumbURL];
             UIImage *tempImage = [cache imageFromMemoryCacheForKey:key];

@@ -16,7 +16,6 @@
 @property (nonatomic, weak) MBProgressHUD *hud;
 @property (nonatomic, strong) SGPhotoModel *model;
 
-
 - (void)sg_setImageWithURL:(NSURL *)url;
 - (void)sg_setImageWithURL:(NSURL *)url model:(SGPhotoModel *)model;
 

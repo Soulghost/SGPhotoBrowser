@@ -19,7 +19,7 @@
 }
 
 - (void)setupViews {
-    UIBarButtonItem *editBtn = [self createBarButtomItemWithImage:[UIImage imageNamed:@"EditButton"]];
+    UIBarButtonItem *editBtn = [self createBarButtomItemWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SGPhotoBrowser.bundle/EditButton@2x.png" ofType:nil]]];
     editBtn.tag = SGBrowserToolButtonEdit;
     self.items = @[editBtn,[self createSpring]];
 }

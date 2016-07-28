@@ -120,7 +120,7 @@
         [_currentImageView setSingleTapHandler:nil];
     }
     _currentImageView = currentImageView;
-    WS();
+    sg_ws();
     [_currentImageView setSingleTapHandler:^{
         if (weakSelf.singleTapHandler) {
             weakSelf.singleTapHandler();

@@ -12,6 +12,7 @@
 
 @interface SGPhotoCell : UICollectionViewCell
 
+@property (nonatomic, weak) UIImageView *imageView;
 @property (nonatomic, strong) SGPhotoModel *model;
 @property (nonatomic, assign) BOOL sg_select;
 

@@ -29,4 +29,4 @@ typedef void(^SGPhotoBrowserReloadRequestBlock)(void);
 
 #define isLandScape() (([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft) || \
                       ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight))
-#define WS() __weak typeof(self) weakSelf = self
+#define sg_ws() __weak typeof(self) weakSelf = self

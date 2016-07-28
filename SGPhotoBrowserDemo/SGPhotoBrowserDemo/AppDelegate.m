@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [MyBrowserViewController new];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[MyBrowserViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

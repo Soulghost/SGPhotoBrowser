@@ -19,7 +19,7 @@
 }
 
 - (void)setupViews {
-    UIBarButtonItem *editBtn = [self createBarButtomItemWithImage:[UIImage imageNamed:@"BackButton"]];
+    UIBarButtonItem *editBtn = [self createBarButtomItemWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SGPhotoBrowser.bundle/BackButton@2x.png" ofType:nil]]];
     editBtn.tag = SGBrowserToolButtonBack;
     UIBarButtonItem *actionBtn = [self createBarButtomItemWithSystemItem:UIBarButtonSystemItemAction];
     actionBtn.tag = SGBrowserToolButtonAction;
