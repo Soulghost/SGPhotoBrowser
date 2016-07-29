@@ -1,6 +1,13 @@
 # SGPhotoBrowser
 SGPhotoBrowser is a simple iOS photo browser with optional grid view, you can simplely inherit the `SGPhotoBrowser` controller to custom the display and provide the dataSource using block.
 
+## Screenshots
+<p>
+    <img src="https://raw.githubusercontent.com/Soulghost/SGPhotoBrowser/master/images/1.png" alt="Photo Grid" width="320" height="569"/>
+    <img src="https://raw.githubusercontent.com/Soulghost/SGPhotoBrowser/master/images/2.png" alt="Edit Photos" width="320" height="569"/>
+    <img src="https://raw.githubusercontent.com/Soulghost/SGPhotoBrowser/master/images/3.png" alt="Origin Photo" width="320" height="569"/>
+</p>
+
 ## How to Get Started
 - [Download SGPhotoBrowser](https://github.com/Soulghost/SGPhotoBrowser/archive/master.zip) and try out the include iPhone example app.
 
