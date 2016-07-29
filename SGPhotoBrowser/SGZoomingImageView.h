@@ -25,7 +25,7 @@ typedef void(^SGZoomingImageViewTapHandlerBlock)(void);
 - (void)setSingleTapHandler:(SGZoomingImageViewTapHandlerBlock)handler;
 - (void)scaleToFitAnimated:(BOOL)animated;
 - (void)scaleToOriginSize:(BOOL)animated;
-- (void)toggleState:(BOOL)animated;
+- (void)toggleStateAnimated:(BOOL)animated;
 - (void)scaleToFitIfNeededAnimated:(BOOL)animated;
 
 @end

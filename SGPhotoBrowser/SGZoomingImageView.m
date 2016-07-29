@@ -91,7 +91,7 @@
     [self zoomToRect:zoomRect animated:animated];
 }
 
-- (void)toggleState:(BOOL)animated {
+- (void)toggleStateAnimated:(BOOL)animated {
     if (self.state == SGImageViewStateNone || self.state == SGImageViewStateFit) {
         [self scaleToOriginSize:animated];
     } else {
@@ -129,7 +129,7 @@
 
 - (void)handleDoubleTap {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    [self toggleState:YES];
+    [self toggleStateAnimated:YES];
 }
 
 #pragma mark -

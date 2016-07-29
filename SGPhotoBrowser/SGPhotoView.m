@@ -42,7 +42,7 @@
 
 - (void)handleDoubleTap {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    [self.currentImageView toggleState:YES];
+    [self.currentImageView toggleStateAnimated:YES];
 }
 
 - (void)setBrowser:(SGPhotoBrowser *)browser {
