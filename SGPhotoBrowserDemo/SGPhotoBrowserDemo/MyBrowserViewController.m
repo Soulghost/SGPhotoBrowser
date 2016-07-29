@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
     [self setupBrowser];
+    [self loadData];
 }
 
 - (void)setupBrowser {
@@ -70,6 +70,7 @@
             [photoModels addObject:model];
         }
         self.photoModels = photoModels;
+        [self reloadData];
     });
 }
 
