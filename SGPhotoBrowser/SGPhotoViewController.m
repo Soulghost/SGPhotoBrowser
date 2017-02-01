@@ -106,7 +106,7 @@
             [SGPhotoBrowser deleteImageWithURL:model.photoURL];
             [SGPhotoBrowser deleteImageWithURL:model.thumbURL];
             if (self.browser.deleteHandler) {
-                self.browser.deleteHandler(model.index);
+                self.browser.deleteHandler([NSIndexSet indexSetWithIndex:model.index]);
             }
             [self.navigationController popViewControllerAnimated:YES];
             NSAssert(self.browser.reloadHandler != nil, @"you must implement 'reloadHandler' block to reload files while delete");

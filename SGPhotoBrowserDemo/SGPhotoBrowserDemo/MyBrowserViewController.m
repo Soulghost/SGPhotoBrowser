@@ -35,8 +35,8 @@
     [self setReloadHandlerBlock:^{
         // add reload data code here
     }];
-    [self setDeleteHandlerBlock:^(NSInteger index) {
-        [weakSelf.photoModels removeObjectAtIndex:index];
+    [self setDeleteHandlerBlock:^(NSIndexSet *indexSet) {
+        [weakSelf.photoModels removeObjectsAtIndexes:indexSet];
         [weakSelf reloadData];
     }];
 }

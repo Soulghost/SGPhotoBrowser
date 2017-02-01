@@ -197,15 +197,16 @@
         [MBProgressHUD showError:@"Select Images Before Delete"];
         return;
     }
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
     for (NSUInteger i = 0; i < count; i++) {
         SGPhotoModel *model = self.selectModels[i];
         [SGPhotoBrowser deleteImageWithURL:model.photoURL];
         [SGPhotoBrowser deleteImageWithURL:model.thumbURL];
-        if (self.deleteHandler) {
-            self.deleteHandler(model.index);
-        }
+        [indexSet addIndex:model.index];
     }
-    self.reloadHandler();
+    if (self.deleteHandler) {
+        self.deleteHandler(indexSet);
+    }
 }
 
 - (void)checkImplementation {

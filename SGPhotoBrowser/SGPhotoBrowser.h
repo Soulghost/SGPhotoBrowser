@@ -11,8 +11,8 @@
 
 typedef SGPhotoModel * (^SGPhotoBrowserDataSourcePhotoBlock)(NSInteger index);
 typedef NSInteger (^SGPhotoBrowserDataSourceNumberBlock)(void);
-typedef void(^SGPhotoBrowserReloadRequestBlock)(void);
-typedef void(^SGPhotoBrowserDeletePhotoAtIndexBlock)(NSInteger index);
+typedef void (^SGPhotoBrowserReloadRequestBlock)(void);
+typedef void (^SGPhotoBrowserDeletePhotoAtIndexBlock)(NSIndexSet *indexes);
 
 @interface SGPhotoBrowser : UIViewController
 
